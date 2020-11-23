@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="task9a.css">
+</head>
+
+<body>
+    <div class="d1">
+        <img src="img11.png" alt="image">
+        <p>FORM-A-STORY</p>
+    </div>
+    <div class="d2">
+        <h1>The <u class="animal">null</u> and The <u class="another">null</u></h1>
+
+        <p>A <b><u class="animal">null</u></b> was making fun of the <b><u class="another">null</u></b> one day for
+            being so slow.
+        </p>
+
+        <p>"Do you ever get anywhere ?" he asked with a mocking laugh.<br></p>
+        <p>
+            <b><u id="yes"></u>null</b> replied the <b><u class="another">null</u></b>
+            "but I get there <b><u id="speed">null</u></b> then you think.
+            I'll run you a race and prove it"
+        </p>
+        <p>The <b><u class="animal">null</u></b> was much <b><u id="adj">null</u></b>
+            at the ida of running a race with the <b><u class="another">null</u></b>, but for the fun of the thing he
+            agreed. So the
+            <b><u id="more">null</u></b>, who had consented to act as judge, marked the distance yelled, <b><u
+                    id="quote">null</u></b>.
+        </p>
+        <p>
+            The <b><u class="animal">null</u></b> was soon far out of sight ,and to make the<b><u
+                    class="another">null</u></b> feel very deeply how
+            ridiculous it was for him to try a race with a <b><u class="animal">null</u></b>. he went off the course to
+            practice
+            <b><u class="verb">null</u></b> for <b><u id="number">null</u></b> hours until the <b><u
+                    class="another">null</u></b> should catch up. </p>
+        <p>
+            The <b><u class="another">null</u></b> meanwhile kept going slowly but steadily and, after a time, passed
+            the place where
+            the <b><u class="animal">null</u></b> was <b><u class="verb">null</u></b>. The <b><u
+                    class="animal">null</u></b> was so caught up in
+            <b><u class="verb">null</u></b>; and when at last he did stop,the <b><u class="another">null</u></b> was
+            near the goal. The
+            <b><u class="animal">null</u></b> now ran his swiftest, but he could not overtake the <b><u
+                    class="another">null</u></b> in time.
+        </p>
+        <h3>Moral of story:</h3>
+        <h3>"<span id="message" style="color: green;"></span>"</h3>
+    </div>
+    <script>
+
+        function findGetParameter(parameterName) {
+            var result = null,
+                tmp = [];
+            location.search
+                .substr(1)
+                .split("&")
+                .forEach(function (item) {
+                    tmp = item.split("=");
+                    if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+                });
+            return result;
+        }
+        var x = document.getElementsByClassName("animal");
+        for (i = 0; i < x.length; i++) {
+            x[i].innerHTML = findGetParameter("animal");
+        }
+        var x1 = document.getElementsByClassName("another");
+        for (i = 0; i < x1.length; i++) {
+            x1[i].innerHTML = findGetParameter("another");
+        }
+        var x2 = document.getElementsByClassName("verb");
+        for (i = 0; i < x2.length; i++) {
+            x2[i].innerHTML = findGetParameter("verb");
+        }
+        document.getElementById("more").innerHTML = findGetParameter("more");
+        document.getElementById("adj").innerHTML = findGetParameter("adj");
+        document.getElementById("number").innerHTML = findGetParameter("number");
+        document.getElementById("yes").innerHTML = findGetParameter("yes");
+        document.getElementById("speed").innerHTML = findGetParameter("speed");
+        document.getElementById("quote").innerHTML = findGetParameter("quote");
+        document.getElementById("message").innerHTML = findGetParameter("message");
+    </script>
+</body>
+
+</html>
